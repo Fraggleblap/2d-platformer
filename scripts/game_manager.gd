@@ -5,6 +5,6 @@ var blank_score = 0
 
 func add_blank():
 	blank_score += 1
-	score_label.text = "Score" + str(blank_score)
+	score_label.text = "Score " + str(blank_score)
 	
 	
