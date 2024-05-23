@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://4bxohyfennha"]
+[gd_scene load_steps=10 format=3 uid="uid://4bxohyfennha"]
 
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_qi7m4"]
 [ext_resource type="Texture2D" uid="uid://bobbiedwiivmv" path="res://assets/sprites/slime_green.png" id="1_wf88r"]
 [ext_resource type="PackedScene" uid="uid://d03bibqcs6ffc" path="res://scenes/death.tscn" id="2_2h4i3"]
 
@@ -42,7 +43,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8hj5"]
 size = Vector2(14, 12)
 
-[node name="Node2D" type="Node2D"]
+[node name="slime" type="Node2D"]
+script = ExtResource("1_qi7m4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1hhyf")
@@ -53,3 +55,11 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_k8hj5")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(-10, 0)
