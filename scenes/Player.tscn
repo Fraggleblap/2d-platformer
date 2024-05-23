@@ -179,8 +179,10 @@ script = ExtResource("1_vuv07")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_llv4d")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
+frame = 4
+frame_progress = 0.530815
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
