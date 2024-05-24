@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfqi3f4celsef"
-path="res://.godot/imported/SCi-fi assets planet one.png-510dbcac63c5685d90d085e3b44af119.ctex"
+uid="uid://kstsoro6272j"
+path="res://.godot/imported/down.png-affa549fb63733ea71ceb704d03ec509.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/SCi-fi assets planet one.png"
-dest_files=["res://.godot/imported/SCi-fi assets planet one.png-510dbcac63c5685d90d085e3b44af119.ctex"]
+source_file="res://assets/sprites/rock droid merchant/down.png"
+dest_files=["res://.godot/imported/down.png-affa549fb63733ea71ceb704d03ec509.ctex"]
 
 [params]
 

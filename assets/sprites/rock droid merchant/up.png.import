@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpdmaqneos2oq"
-path="res://.godot/imported/helldivers_ss.jpg-b04ccb467ba25dd6bc8d4d6431e90f45.ctex"
+uid="uid://b8d7sraf5h0lh"
+path="res://.godot/imported/up.png-014b4696fa056d6480776dd3b1e01d61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/helldivers_ss.jpg"
-dest_files=["res://.godot/imported/helldivers_ss.jpg-b04ccb467ba25dd6bc8d4d6431e90f45.ctex"]
+source_file="res://assets/sprites/rock droid merchant/up.png"
+dest_files=["res://.godot/imported/up.png-014b4696fa056d6480776dd3b1e01d61.ctex"]
 
 [params]
 
