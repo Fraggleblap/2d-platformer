@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://chohm6i6nfktg"]
+[gd_scene load_steps=29 format=3 uid="uid://chohm6i6nfktg"]
 
 [ext_resource type="Texture2D" uid="uid://cjevom733ihow" path="res://assets/sprites/knight.png" id="1_57f8y"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_vuv07"]
@@ -22,10 +22,6 @@ region = Rect2(96, 192, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dxl27"]
 atlas = ExtResource("1_57f8y")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gp2ea"]
-atlas = ExtResource("1_57f8y")
-region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ej64s"]
 atlas = ExtResource("1_57f8y")
@@ -127,9 +123,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_dxl27")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gp2ea")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ej64s")
 }, {
 "duration": 1.0,
@@ -212,8 +205,9 @@ script = ExtResource("1_vuv07")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_llv4d")
-animation = &"damage"
+animation = &"run"
 autoplay = "idle"
+frame_progress = 0.972897
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
