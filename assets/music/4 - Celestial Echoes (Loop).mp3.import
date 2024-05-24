@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0rq7wcvo18n2"
+path="res://.godot/imported/4 - Celestial Echoes (Loop).mp3-01c0629496f8b6e8daf94b74bb08523f.mp3str"
+
+[deps]
+
+source_file="res://assets/music/4 - Celestial Echoes (Loop).mp3"
+dest_files=["res://.godot/imported/4 - Celestial Echoes (Loop).mp3-01c0629496f8b6e8daf94b74bb08523f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
