@@ -1253,7 +1253,6 @@ text = "Score:"
 position = Vector2(2.38419e-07, 3)
 scale = Vector2(31.9106, 361.667)
 zoom = Vector2(2, 2)
-limit_bottom = 65
 limit_smoothed = true
 position_smoothing_enabled = true
 

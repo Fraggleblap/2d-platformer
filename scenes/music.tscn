@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ce45i0rwmnbv0"]
 
-[ext_resource type="AudioStream" uid="uid://3geduyocikfg" path="res://assets/music/time_for_adventure.mp3" id="1_piwcm"]
+[ext_resource type="AudioStream" uid="uid://bf2n304nku6vw" path="res://assets/music/2 - Galactic Odyssey (Loop).mp3" id="1_pipx2"]
 
 [node name="Music" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_piwcm")
+stream = ExtResource("1_pipx2")
 autoplay = true
