@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://85mohlf42np4"]
+
+[ext_resource type="Texture2D" uid="uid://c4lc20dmlf4h1" path="res://assets/sprites/Black_hole.png" id="1_mvd5k"]
+[ext_resource type="Script" path="res://scripts/interact_object.gd" id="1_vireb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmbv5"]
+radius = 19.2094
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yotfn"]
+radius = 44.2832
+
+[node name="interactObject" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_vireb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mvd5k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wmbv5")
+
+[node name="interactCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yotfn")
+
+[connection signal="tree_entered" from="interactCollision" to="." method="_on_interact_collision_tree_entered"]
