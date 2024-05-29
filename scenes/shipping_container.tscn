@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbnwgh50scqhj"]
+[gd_scene load_steps=3 format=3 uid="uid://bbnwgh50scqhj"]
 
-[ext_resource type="Script" path="res://scripts/shipping_container.gd" id="1_66l4c"]
 [ext_resource type="Texture2D" uid="uid://cfqi3f4celsef" path="res://assets/sprites/scifi_assets.png" id="1_lxjs6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stgaj"]
@@ -8,7 +7,6 @@ size = Vector2(44, 6)
 
 [node name="shipping_container" type="StaticBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_66l4c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_lxjs6")
