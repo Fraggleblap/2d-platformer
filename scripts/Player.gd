@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 @export var speed = 90
 
+var inventory = []
 
 func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -31,6 +32,11 @@ func _physics_process(delta):
 			interact_label.visible = true
 			if Input.is_action_pressed("interact"):
 				interact_label.visible = false
+				if object.is_in_group("collectable"):
+					inventory.append(object.name)
+					print(inventory)
+				else:
+					pass
 				object.queue_free()
 			else:
 				pass

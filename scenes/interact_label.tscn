@@ -27,4 +27,4 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3.00026, 3.00026)
 theme_override_fonts/font = ExtResource("1_1kjo0")
-text = "interact"
+text = "Interact [E]"

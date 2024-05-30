@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbnwgh50scqhj" path="res://scenes/shipping_container.tscn" id="6_0fxqj"]
 [ext_resource type="Texture2D" uid="uid://bjyhirvbfpcli" path="res://assets/sprites/DesertTiles.png" id="6_6cxhv"]
 [ext_resource type="PackedScene" uid="uid://cviccocx427tb" path="res://scenes/interact_label.tscn" id="7_8lvno"]
-[ext_resource type="PackedScene" uid="uid://85mohlf42np4" path="res://scenes/interact_object.tscn" id="8_80u61"]
+[ext_resource type="PackedScene" uid="uid://85mohlf42np4" path="res://scenes/rock.tscn" id="8_80u61"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4uyuh"]
 texture = ExtResource("2_qj8pr")
@@ -1292,10 +1292,30 @@ layer_2/tile_data = PackedInt32Array()
 z_index = 1
 position = Vector2(-92, -44)
 
-[node name="coins" type="Node" parent="."]
-
 [node name="enemies" type="Node" parent="."]
 
-[node name="interactObject" parent="." instance=ExtResource("8_80u61")]
-z_index = 5
+[node name="interactables" type="Node" parent="."]
+
+[node name="rock" parent="interactables" instance=ExtResource("8_80u61")]
 position = Vector2(80, -19)
+
+[node name="rock2" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(-38, 26)
+
+[node name="rock3" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(-89, 14)
+
+[node name="rock4" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(44, 29)
+
+[node name="rock5" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(-41, -24)
+
+[node name="rock6" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(66, -47)
+
+[node name="rock7" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(106, -70)
+
+[node name="rock8" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(129, -25)
