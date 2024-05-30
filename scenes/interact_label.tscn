@@ -25,6 +25,6 @@ offset_right = 52.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3.99998, 3.99998)
+scale = Vector2(3.00026, 3.00026)
 theme_override_fonts/font = ExtResource("1_1kjo0")
 text = "interact"

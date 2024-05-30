@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var game_manager = %GameManager
+@onready var interact_label = $Camera2D/interactLabel
+@onready var hit_ray = $hitRay
+
 @export var speed = 90
 
 
@@ -10,9 +13,10 @@ func get_input():
 	velocity = input_direction * speed
 	if input_direction.x > 0:
 		animated_sprite.flip_h = false
+		hit_ray.target_position.x = 17
 	elif input_direction.x < 0:
 		animated_sprite.flip_h = true
-	
+		hit_ray.target_position.x = -17
 	if input_direction != Vector2(0,0):
 		animated_sprite.play("run")
 	else:
@@ -21,14 +25,15 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-	if get_node("RayCast2D_R").is_colliding():
-		var object = get_node("RayCast2D_R").get_collider()
-		if object.is_in_group("Interactable"):
-			if Input.is_action_just_pressed("interact"):
-				print("iunteractededd")
-				print(object)
-	elif get_node("RayCast2D_L").is_colliding():
-		var object = get_node("RayCast2D_L").get_collider()
-		if object.is_in_group("Interactable"):
-			if Input.is_action_just_pressed("interact"):
-				print("iunteracteded12312321d")
+	if get_node("hitRay").is_colliding():
+		var object = get_node("hitRay").get_collider()
+		if object and object.is_in_group("Interactable"):
+			interact_label.visible = true
+			if Input.is_action_pressed("interact"):
+				interact_label.visible = false
+				object.queue_free()
+			else:
+				pass
+	else:
+		interact_label.visible = false
+		pass

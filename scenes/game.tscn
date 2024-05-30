@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7fgf2cc014e1"]
+[gd_scene load_steps=13 format=3 uid="uid://b7fgf2cc014e1"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_g1hc5"]
 [ext_resource type="PackedScene" uid="uid://chohm6i6nfktg" path="res://scenes/Player.tscn" id="1_vtr4o"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbnwgh50scqhj" path="res://scenes/shipping_container.tscn" id="6_0fxqj"]
 [ext_resource type="Texture2D" uid="uid://bjyhirvbfpcli" path="res://assets/sprites/DesertTiles.png" id="6_6cxhv"]
 [ext_resource type="PackedScene" uid="uid://cviccocx427tb" path="res://scenes/interact_label.tscn" id="7_8lvno"]
+[ext_resource type="PackedScene" uid="uid://85mohlf42np4" path="res://scenes/interact_object.tscn" id="8_80u61"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4uyuh"]
 texture = ExtResource("2_qj8pr")
@@ -1263,6 +1264,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="interactLabel" parent="CharacterBody2D/Camera2D" instance=ExtResource("7_8lvno")]
+visible = false
 visibility_layer = 3
 z_index = 5
 anchors_preset = -1
@@ -1270,6 +1272,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_bottom = 150.0
 scale = Vector2(0.00439604, 0.000415572)
 size_flags_horizontal = 0
 size_flags_vertical = 4
@@ -1292,3 +1295,7 @@ position = Vector2(-92, -44)
 [node name="coins" type="Node" parent="."]
 
 [node name="enemies" type="Node" parent="."]
+
+[node name="interactObject" parent="." instance=ExtResource("8_80u61")]
+z_index = 5
+position = Vector2(80, -19)
