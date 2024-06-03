@@ -19,19 +19,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -20.0
-offset_right = -9.0
-offset_bottom = 20.0
+offset_left = -104.0
+offset_top = -50.0
+offset_right = -44.0
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3.04, 2.96)
+scale = Vector2(3.081, 3)
 
 [node name="VBuxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBuxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("2_hlr07")
 text = "Play"
 

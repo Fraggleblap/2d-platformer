@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7fgf2cc014e1"]
+[gd_scene load_steps=14 format=3 uid="uid://b7fgf2cc014e1"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_g1hc5"]
 [ext_resource type="PackedScene" uid="uid://chohm6i6nfktg" path="res://scenes/Player.tscn" id="1_vtr4o"]
 [ext_resource type="Texture2D" uid="uid://rj1bmjvonyiu" path="res://assets/sprites/world_tileset.png" id="2_qj8pr"]
+[ext_resource type="PackedScene" uid="uid://dyytdowf47mmj" path="res://scenes/inventory_ui.tscn" id="4_ey7fr"]
 [ext_resource type="Texture2D" uid="uid://cfqi3f4celsef" path="res://assets/sprites/scifi_assets.png" id="5_lho5h"]
 [ext_resource type="PackedScene" uid="uid://bbnwgh50scqhj" path="res://scenes/shipping_container.tscn" id="6_0fxqj"]
 [ext_resource type="Texture2D" uid="uid://bjyhirvbfpcli" path="res://assets/sprites/DesertTiles.png" id="6_6cxhv"]
@@ -1264,7 +1265,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="interactLabel" parent="CharacterBody2D/Camera2D" instance=ExtResource("7_8lvno")]
-visible = false
 visibility_layer = 3
 z_index = 5
 anchors_preset = -1
@@ -1276,6 +1276,8 @@ offset_bottom = 150.0
 scale = Vector2(0.00439604, 0.000415572)
 size_flags_horizontal = 0
 size_flags_vertical = 4
+
+[node name="inventoryLabel" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_ey7fr")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.961408, 0.969846)
