@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b7fgf2cc014e1"]
+[gd_scene load_steps=16 format=3 uid="uid://b7fgf2cc014e1"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_g1hc5"]
 [ext_resource type="PackedScene" uid="uid://chohm6i6nfktg" path="res://scenes/Player.tscn" id="1_vtr4o"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bjyhirvbfpcli" path="res://assets/sprites/DesertTiles.png" id="6_6cxhv"]
 [ext_resource type="PackedScene" uid="uid://cviccocx427tb" path="res://scenes/interact_label.tscn" id="7_8lvno"]
 [ext_resource type="PackedScene" uid="uid://85mohlf42np4" path="res://scenes/rock.tscn" id="8_80u61"]
+[ext_resource type="PackedScene" uid="uid://c5d5k5ipcbxo3" path="res://scenes/collector.tscn" id="8_pqk4i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4uyuh"]
 texture = ExtResource("2_qj8pr")
@@ -1246,6 +1247,11 @@ sources/0 = SubResource("TileSetAtlasSource_4uyuh")
 sources/1 = SubResource("TileSetAtlasSource_av8uj")
 sources/2 = SubResource("TileSetAtlasSource_wkw5t")
 
+[sub_resource type="GDScript" id="GDScript_dh2ba"]
+script/source = "extends StaticBody2D
+
+"
+
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
@@ -1259,10 +1265,9 @@ y_sort_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(2.38419e-07, 3)
-scale = Vector2(31.9106, 361.667)
+scale = Vector2(0.088, 1)
 zoom = Vector2(3, 3)
 limit_smoothed = true
-position_smoothing_enabled = true
 
 [node name="interactLabel" parent="CharacterBody2D/Camera2D" instance=ExtResource("7_8lvno")]
 visibility_layer = 3
@@ -1272,12 +1277,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_bottom = 150.0
-scale = Vector2(0.00439604, 0.000415572)
+offset_left = -130.07
+offset_top = 6.83794
+offset_right = -130.07
+offset_bottom = 156.838
+scale = Vector2(1.5, 0.105)
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
 [node name="inventoryLabel" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_ey7fr")]
+visibility_layer = 3
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1691.35
+offset_top = -105.322
+offset_right = 1691.35
+offset_bottom = -105.322
+grow_vertical = 1
+scale = Vector2(2, 0.14)
+size_flags_horizontal = 0
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.961408, 0.969846)
@@ -1289,6 +1310,12 @@ layer_1/name = "geography"
 layer_1/tile_data = PackedInt32Array(-262146, 393218, 2, -262145, 393218, 2, -327680, 393218, 2, -327679, 393218, 2, -327678, 393218, 2, -327677, 393218, 2, -458755, 327682, 1, -393219, 327682, 1, -327683, 327682, 1, -262147, 327682, 2, -458754, 393218, 1, -393218, 393218, 1, -327682, 589826, 4, -458753, 393218, 1, -393217, 589826, 3, -327681, 393218, 1, -458752, 589826, 3, -393216, 524290, 2, -524287, 393218, 1, -458751, 393218, 1, -393215, 589826, 3, -524286, 524290, 4, -458750, 589826, 3, -393214, 524290, 2, -524285, 393218, 1, -458749, 393218, 1, -393213, 393218, 1, -327676, 458754, 2, -524284, 458754, 1, -458748, 458754, 1, -393212, 458754, 1, -524290, 393218, 0, -524289, 524290, 0, -589823, 589826, 0, -589822, 393218, 0, -589821, 393218, 0, -524291, 327682, 0, -589820, 458754, 0, -524288, 589826, 3)
 layer_2/name = "items"
 layer_2/tile_data = PackedInt32Array()
+
+[node name="collector" parent="." instance=ExtResource("8_pqk4i")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(212.134, -39.0686)
+script = SubResource("GDScript_dh2ba")
 
 [node name="shipping_container" parent="." instance=ExtResource("6_0fxqj")]
 z_index = 1

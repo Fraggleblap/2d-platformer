@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Music="*res://scenes/music.tscn"
-InteractionManager="*res://assets/interactions/InteractionManager.tscn"
 
 [input]
 

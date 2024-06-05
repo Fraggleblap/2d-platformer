@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5d5k5ipcbxo3"]
+
+[ext_resource type="Texture2D" uid="uid://c4abp15lib5jk" path="res://assets/sprites/Sci-fi Tileset re-imagined.png" id="1_8e3cf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh8n6"]
+size = Vector2(9.63433, 11.1369)
+
+[node name="collector" type="StaticBody2D" groups=["Interactable"]]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8e3cf")
+region_enabled = true
+region_rect = Rect2(225, 224, 14, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-0.00579453, 8.54283)
+shape = SubResource("RectangleShape2D_vh8n6")

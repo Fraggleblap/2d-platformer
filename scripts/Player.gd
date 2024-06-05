@@ -34,10 +34,13 @@ func _physics_process(delta):
 				interact_label.visible = false
 				if object.is_in_group("collectable"):
 					inventory.append(object.name)
+					game_manager.add_sample()
 					print(inventory)
+					object.queue_free()
+				elif object.name == "collector":
+					game_manager.upload()
 				else:
 					pass
-				object.queue_free()
 			else:
 				pass
 	else:
