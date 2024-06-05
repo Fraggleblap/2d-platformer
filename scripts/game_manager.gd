@@ -1,5 +1,6 @@
 extends Node
 @onready var inventory_label = $"../CharacterBody2D/Camera2D/inventoryLabel/Label"
+@onready var money_label = $"../CharacterBody2D/Camera2D/inventoryLabel/moneyLabel"
 
 var blank_score = 0
 var samples = 0
@@ -21,3 +22,4 @@ func upload():
 	money += samples*2
 	samples = 0
 	inventory_label.text = "Samples: " + str(samples)
+	money_label.text = "Money: $" + str(money)
