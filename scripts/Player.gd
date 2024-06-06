@@ -24,6 +24,10 @@ func get_input():
 		animated_sprite.play("idle")
 
 
+func _physics_process(delta):
+	get_input()
+	move_and_slide()
+
 func _process(delta):
 	if get_node("hitRay").is_colliding():
 		var object = get_node("hitRay").get_collider()
