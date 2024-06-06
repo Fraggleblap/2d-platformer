@@ -4,13 +4,13 @@ extends CharacterBody2D
 @onready var game_manager = %GameManager
 @onready var interact_label = $Camera2D/interactLabel
 @onready var hit_ray = $hitRay
-
 @export var speed = 90
 
 var inventory = []
 
 func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
 	velocity = input_direction * speed
 	if input_direction.x > 0:
 		animated_sprite.flip_h = false
@@ -22,10 +22,9 @@ func get_input():
 		animated_sprite.play("run")
 	else:
 		animated_sprite.play("idle")
-	
-func _physics_process(delta):
-	get_input()
-	move_and_slide()
+
+
+func _process(delta):
 	if get_node("hitRay").is_colliding():
 		var object = get_node("hitRay").get_collider()
 		if object and object.is_in_group("Interactable"):

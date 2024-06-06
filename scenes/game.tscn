@@ -1343,6 +1343,29 @@ position = Vector2(-41, -24)
 [node name="rock6" parent="interactables" instance=ExtResource("8_80u61")]
 position = Vector2(66, -47)
 
+[node name="rock9" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(256, -261)
+
+[node name="rock10" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(113, -178)
+rotation = 2.86121
+
+[node name="rock11" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(156, 189)
+rotation = 2.86121
+
+[node name="rock12" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(-63, 288)
+rotation = 2.86121
+
+[node name="rock13" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(434, 363)
+rotation = 2.86121
+
+[node name="rock14" parent="interactables" instance=ExtResource("8_80u61")]
+position = Vector2(506, 35)
+rotation = 2.86121
+
 [node name="rock7" parent="interactables" instance=ExtResource("8_80u61")]
 position = Vector2(106, -70)
 
